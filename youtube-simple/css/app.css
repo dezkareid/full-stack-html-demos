@@ -1,0 +1,103 @@
+html, body {
+  height: 100vh;
+}
+
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+.link-container {
+  display: inline-block;
+  width: 100%;
+}
+
+.logo-box {
+  display: inline-block;
+  width: 20%;
+}
+
+.logo-box--link {
+  display: inline-block
+}
+
+.logo-box--image {
+  width: 50px;
+}
+
+.nav-bar {
+  background-color: white;
+  border-bottom: 2px grey solid;
+  padding: 8px 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+
+
+.form--search {
+  display: inline-block;
+  height: 40px;
+  font-size: 0;
+}
+
+.form--search-input {
+  height: 100%;
+}
+
+.form--search-button {
+  height: 100%;
+}
+
+main {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 76px;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding: 10px 20px 20px;
+  position: relative;
+  height: 100%;
+}
+
+.carousel {
+  overflow-x:scroll;
+  white-space: nowrap;
+}
+
+.video-item {
+  display: inline-block;
+  margin: 15px;
+  padding: 1px;
+  width: calc(25% - 30px);
+  color: black;
+}
+
+.video-item--link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.video-item--link:visited {
+  color: inherit;
+}
+
+.video-item--image {
+  width: 100%;
+  max-width: 100%;
+}
+
+.video-item--image:hover {
+  cursor: pointer;
+}
