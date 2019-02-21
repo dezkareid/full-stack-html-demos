@@ -45,8 +45,6 @@ body {
   z-index: 1;
 }
 
-
-
 .form--search {
   display: inline-block;
   height: 40px;
@@ -71,19 +69,6 @@ main {
   height: 100%;
 }
 
-.carousel {
-  overflow-x:scroll;
-  white-space: nowrap;
-}
-
-.video-item {
-  display: inline-block;
-  margin: 15px;
-  padding: 1px;
-  width: calc(25% - 30px);
-  color: black;
-}
-
 .video-item--link {
   text-decoration: none;
   color: inherit;
@@ -100,4 +85,29 @@ main {
 
 .video-item--image:hover {
   cursor: pointer;
+}
+
+.carousel {
+  overflow-x:scroll;
+  white-space: nowrap;
+}
+
+.video-item {
+  display: block;
+  margin: 15px;
+  padding: 1px;
+  color: black;
+}
+@media (min-width: 500px) and (max-width: 800px){
+  .video-item {
+    display: inline-block;
+    width: calc(33% - 30px);
+  }
+}
+
+@media (min-width: 800px) {
+  .video-item {
+    display: inline-block;
+    width: calc(25% - 30px);
+  }
 }
