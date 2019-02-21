@@ -87,6 +87,12 @@ main {
   cursor: pointer;
 }
 
+.video-item--title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
 .carousel {
   overflow-x:scroll;
   white-space: nowrap;
