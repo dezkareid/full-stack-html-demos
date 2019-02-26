@@ -1,47 +1,4 @@
-const videos = {
-  principal: [
-    {
-      id: '1',
-      img: 'https://placekitten.com/g/200/120',
-      title: 'Lego The Movie'
-    },
-    {
-      id: '1',
-      img: 'https://placekitten.com/g/200/120',
-      title: 'Avengers End game'
-    }
-  ],
-  recomendados: [
-    {
-      id: '1',
-      img: 'https://placekitten.com/g/200/120',
-      title: 'Lego The Movie'
-    },
-    {
-      id: '1',
-      img: 'https://placekitten.com/g/200/120',
-      title: 'Avengers End game'
-    }
-  ],
-  internacional: [
-    {
-      id: '1',
-      img: 'https://placekitten.com/g/200/120',
-      title: 'Lego The Movie'
-    },
-    {
-      id: '1',
-      img: 'https://placekitten.com/g/200/120',
-      title: 'Avengers End game'
-    }
-  ]
-}
-/*
-function createVideoDescription (videoInfo) {
-  const item = document.createElement('article')
-  return item
-} */
-
+/* global fetch */
 function appendListVideo (section, title) {
   const header = document.createElement('header')
   const titleElement = document.createElement('h3')
@@ -84,9 +41,18 @@ function appendVideos (section, videos, title) {
   }
 }
 
-window.addEventListener('load', function () {
+function createVideos (videos) {
   const seccionRecomendados = document.getElementById('recomendados')
   const seccionInternacional = document.getElementById('internacional')
   appendVideos(seccionRecomendados, videos.recomendados, 'Recomendados')
   appendVideos(seccionInternacional, videos.internacional, 'Internacional')
+}
+function fetchVideos (url) {
+  return fetch(url)
+    .then(response => response.json())
+}
+
+window.addEventListener('load', function () {
+  return fetchVideos('http://localhost:3000/videos')
+    .then(createVideos)
 })
