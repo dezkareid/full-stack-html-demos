@@ -1,0 +1,40 @@
+{
+  "videos" : {
+    "principal": [
+    {
+      "id": "1",
+      "img": "https://placekitten.com/g/200/120",
+      "title": "Lego The Movie"
+    },
+    {
+      "id": "2",
+      "img": "https://placekitten.com/g/200/120",
+      "title": "Avengers"
+    }
+    ],
+    "recomendados": [
+      {
+        "id": "1",
+        "img": "https://placekitten.com/g/200/120",
+        "title": "Lego The Movie"
+      },
+      {
+        "id": "2",
+        "img": "https://placekitten.com/g/200/120",
+        "title": "Avengers"
+      }
+    ],
+    "internacional": [
+      {
+        "id": "1",
+        "img": "https://placekitten.com/g/200/120",
+        "title": "Lego The Movie"
+      },
+      {
+        "id": "2",
+        "img": "https://placekitten.com/g/200/120",
+        "title": "Avengers"
+      }
+    ]
+  }
+}
