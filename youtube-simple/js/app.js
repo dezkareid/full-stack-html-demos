@@ -32,11 +32,11 @@ function createVideo (video) {
   return article
 }
 
-function appendVideos (section, videos, title) {
+function appendVideos (section, mapVideos, title) {
   appendListVideo(section, title)
   const carousel = section.querySelector('.carousel')
-  for (let index = 0; index < videos.length; index++) {
-    const videoElement = createVideo(videos[index])
+  for (const video of mapVideos) {
+    const videoElement = createVideo(video[1])
     carousel.appendChild(videoElement)
   }
 }
@@ -44,14 +44,25 @@ function appendVideos (section, videos, title) {
 function createVideos (videos) {
   const seccionRecomendados = document.getElementById('recomendados')
   const seccionInternacional = document.getElementById('internacional')
-  appendVideos(seccionRecomendados, videos.recomendados, 'Recomendados')
-  appendVideos(seccionInternacional, videos.internacional, 'Internacional')
+  const mapRecomendados = toMapVideo(videos.recomendados)
+  appendVideos(seccionRecomendados, mapRecomendados, 'Recomendados')
+  const mapInternacional = toMapVideo(videos.internacional)
+  appendVideos(seccionInternacional, mapInternacional, 'Internacional')
 }
 function fetchVideos (url) {
   return fetch(url)
     .then(response => response.json())
 }
 
+function toMapVideo (videos) {
+  const mapVideos = new Map()
+  for (let index = 0; index < videos.length; index++) {
+    if (!mapVideos.has(videos[index].id)) {
+      mapVideos.set(videos[index].id, videos[index])
+    }
+  }
+  return mapVideos
+}
 window.addEventListener('load', function () {
   return fetchVideos('http://localhost:3000/videos')
     .then(createVideos)
