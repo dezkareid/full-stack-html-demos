@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Absolute</title>
+  <style>
+    .father {
+      background: lightcoral;
+      height: 500px;
+      margin-bottom: 10px;
+    }
+    .grand-father {
+      background: peru;
+      padding-top: 20px;
+      /* Descomenta esto y te sorprenderás
+      position: relative;
+      */
+      height: 600px;
+    }
+    .child {
+      background: black;
+      height: 200px;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      right: 20px;
+      /* Descomenta y ve los cambios ... si es que hay :3
+        right: 20px;
+      */
+    }
+  </style>
+</head>
+<body>
+  <div class="father"></div>
+  <div class="grand-father">
+    <div class="father second-father">
+      <div class="child"></div>
+    </div>
+  </div>
+  
+</body>
+</html>
