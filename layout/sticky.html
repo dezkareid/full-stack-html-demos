@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sticky</title>
+  <style>
+    .container {
+      background: lightcoral;
+      min-height: 100vh;
+    }
+    .child {
+      background: black;
+      height: 400px;
+      margin-bottom: 2rem;
+    }
+    .sticky {
+      background: red;
+      height: 100px;
+      position: sticky;
+      /* Elimina top y ve que pasa */
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="sticky"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+  </div>
+</body>
+</html>
+
