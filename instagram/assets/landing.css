@@ -1,0 +1,85 @@
+.body {
+  background-color: #fafafa
+}
+
+.button {
+  background-color: #3897f0;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.center-content {
+  text-align: center;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  margin: 0 0.3rem;
+}
+
+.register-field {
+  position: relative;
+}
+
+.register-field--label {
+  bottom: 0;
+  font-size: 0.8rem;
+  left: 0.3rem;
+  line-height: 2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.register-field--input {
+  font-size: 0.9rem;
+  padding: 0.3rem;
+  width: 100%;
+}
+
+.register-section {
+  width: 80%;
+}
+
+.register-section--button {
+  width: 100%;
+}
+
+.register-section--line-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.3rem 0;
+}
+
+.register-section--line {
+  width: 30%;
+  height: 1px;
+  background-color: blue;
+}
+
+.register-section--line-text {
+  width: 20%;
+  text-align: center;
+}
+
+.text {
+  text-align: center
+}
+
+.text-big {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+
+.text-message {
+  color: gray;
+}
