@@ -26,16 +26,23 @@
 
 .register-field {
   position: relative;
+  margin: 0.5rem 0;
 }
 
 .register-field--label {
   bottom: 0;
   font-size: 0.8rem;
-  left: 0.3rem;
+  left: 0.6rem;
   line-height: 2rem;
   position: absolute;
   right: 0;
   top: 0;
+}
+
+.register-field--label-filling {
+  font-size: 0.6rem;
+  left: 0.3rem;
+  line-height: 0.5rem;
 }
 
 .register-field--input {
